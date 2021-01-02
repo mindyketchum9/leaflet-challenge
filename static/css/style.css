@@ -20,3 +20,15 @@ html {
   line-height: 24px;
   color: black;
 }
+
+.legend k {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 8px 0 0;
+  opacity: 0.9;
+}
+
+.legend span {
+  position: relative;
+}
