@@ -32,3 +32,29 @@ html {
 .legend span {
   position: relative;
 }
+
+.maglt2{
+  border-style: solid;
+  border-color: black;
+  background-color: #ffffb2;
+}
+.maglt3{
+  border-style: solid;
+  border-color: black;
+  background-color: #fecc5c;
+}
+.maglt4{
+  border-style: solid;
+  border-color: black;
+  background-color: #fd8d3c;
+}
+.maglt5{
+   border-style: solid;
+  border-color: black;
+  background-color: #f03b20;
+}
+.maggt5{
+   border-style: solid;
+  border-color: black;
+  background-color: #bd0026;
+}
