@@ -131,23 +131,6 @@ legend.addTo(myMap);
   }).addTo(myMap);
 }
 
-/* Define a function to assign a color to the magnitude of the earthquake.
-    Note: Below we use the d3.extent to determine the domain of values in the dataset
-    and find that the magnitudes vary from -1.29 to 5.9 (on 4/10/2020). Given a negative value
-    for the earthquake magnitude it was researched and found that in fact a magnitude can be negative
-    (https://www.usgs.gov/faqs/how-can-earthquake-have-a-negative-magnitude?qt-news_science_products=0#qt-news_science_products)
-    Therefore we will use these negative values but need to adjust them so the magnitude values can be used
-    to plot the radius of the circleMarker. Also, we will allow for larger values than 5.9 as this is just
-    the largest value witnessed in the prior seven days to 4/10/20. After research we found that there is an 
-    upper limit due to the fact it is related to the length of the fault so a magnitude 10 is theoretically
-    impossible. But a 9.5 has been recorded, so we will allow for magnitudes of -2 through >9.
-    (https://www.usgs.gov/faqs/can-megaquakes-really-happen-a-magnitude-10-or-larger?qt-news_science_products=0#qt-news_science_products)
-
-    It was reviewed how to write this function as either an if/else or a switch. This article recommends the if/else
-    for performance reasons over a "switch-range2" option (https://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than)
-    Finally Colorbrewer 2.0 was used to determine the gradient of colors (https://colorbrewer2.org/#type=sequential&scheme=OrRd&n=9)
-     The article also recommends the maximum number of data classes is 5-7 after experimenting with a number
-     of options we decided to use 5. */
 
      function magColor(mag) {
       var color = "";
@@ -160,8 +143,7 @@ legend.addTo(myMap);
     return color;
     
     };
-// Function to determine if the magnitude is zero or less (See above discussion as it is possible to have
-// negative magnitudes, which obviously can't be used for setting the circleMarker radius)
+// Function to determine if the magnitude is zero or less 
 function magCheck(mag){
   if (mag <= 1){
       return 6
